@@ -1,4 +1,4 @@
-CERMICS-2014_Presentation
+CERMICS 2014 : Presentation
 =========================
 
 Présentation orale du stage réalisé au CERMICS de juin à août 2014.
