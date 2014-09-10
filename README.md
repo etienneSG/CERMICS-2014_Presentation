@@ -1,4 +1,6 @@
 CERMICS-2014_Presentation
 =========================
 
-Présentation orale du stage réalisé au CERMICS de juin à août 2014
+Présentation orale du stage réalisé au CERMICS de juin à août 2014.
+
+Sujet : Complexité du problème de régulation des systèmes de vélo en libre-service sur un ring
