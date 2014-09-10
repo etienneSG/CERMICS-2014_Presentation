@@ -1,0 +1,67 @@
+\documentclass{beamer}
+\usetheme{Boadilla}
+
+%La base (mettre english si rapport de stage en anglais)
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+
+% Affichage du sommaire entre chaque section
+\AtBeginSection[]
+{
+  \begin{frame}
+  \frametitle{Sommaire}
+  \tableofcontents[currentsection, hideothersubsections]
+  \end{frame} 
+}
+
+%Pour souligner sur plusieurs lignes
+\usepackage{ulem}
+\normalem
+
+%Raccourcis utiles
+\newcommand\RR{\mathbb{R}}           %R de l'ensemble des réels
+\newcommand\ZZ{\mathbb{Z}}           %Z de l'ensemble des relatifs
+\newcommand\NN{\mathbb{N}}           %N de l'ensemble des naturels
+\newcommand\Indic{\mathds{1}}        %Fonction indicatrice d'un ensemble
+\newcommand\cE{\mathcal{E}}          %E caligraphié
+\newcommand\bs[1]{\boldsymbol{#1}}   %Symbole en gras dans une formule mathématique
+\newcommand\plus{\textcircled{$+$} }  %Symbole + entouré
+\newcommand\moins{\textcircled{$-$} } %Symbole - entouré
+
+%On définit l'envirronnement propre au théorème
+\theoremstyle{plain} % default (corps en italique)
+\newtheorem{thm}{Théorème}
+\newtheorem{lem}[thm]{Lemme}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition} % (corps en texte normal)
+\newtheorem{conj}{Conjecture}
+\newtheorem*{rmq}{Remarque}
+
+\graphicspath{{images/}}
+
+\begin{document}
+
+% Non affiché mais sera inséré dans les propriétés du fichier
+\title{Complexité du problème de régulation des systèmes de vélo en libre-service sur un ring}
+\author{Etienne de Saint Germain}
+\institute{CERMICS}
+\date{12 septembre 2014}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Sommaire}
+\tableofcontents[hideothersubsections]
+\end{frame}
+
+\include{Sections/Presentation_modele}
+
+\include{Sections/Graphe_triangulaire}
+
+\include{Sections/Graphe_Capacite_infinie}
+
+
+\end{document}
