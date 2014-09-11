@@ -9,7 +9,7 @@
   
     \begin{minipage}[c]{.5\linewidth}
       \begin{center}
-        \includegraphics[width=\textwidth]{CapaciteInfinie.jpg}
+        \includegraphics[width=\textwidth]{CapaciteInfinie/modele.jpg}
       \end{center}
     \end{minipage}\hfill
     \begin{minipage}[c]{.5\linewidth}
@@ -31,47 +31,55 @@
   \begin{center}
     \begin{minipage}[c]{\linewidth}
       \begin{minipage}[c]{.2\linewidth}
-        \only<1>{\includegraphics[width=\textwidth]{CapaciteInfinie_GrapheG.jpg}}
-        \only<2>{\includegraphics[width=\textwidth]{CapaciteInfinie_e0.jpg}}
-        \only<3->{\includegraphics[width=\textwidth]{CapaciteInfinie_suppr_e0.jpg}}
-      \end{minipage}\hfill
-      \begin{minipage}[c]{.8\linewidth}
-        \begin{itemize}
-        \item<2-> Pour chaque $e_0 \in E$
-          \begin{enumerate}
-          \item<3-> Construire $\bs{G(e_0)}$ en supprimant $e_0$
-          \item<4-> Résoudre le SSBP sur $\bs{G(e_0)}$\\
-          (algorithme dans le cas linéaire)
-          \end{enumerate}
-        \end{itemize}
+        \begin{overlayarea}{\textwidth}{0.28\textheight}
+          \only<1>{\includegraphics[width=\textwidth]{CapaciteInfinie/GrapheG.jpg}}
+          \only<2>{\includegraphics[width=\textwidth]{CapaciteInfinie/e0.jpg}}
+          \only<3->{\includegraphics[width=\textwidth]{CapaciteInfinie/suppr_e0.jpg}}
+        \end{overlayarea}
       \end{minipage}
-    \end{minipage}\hfill
+      \begin{minipage}[c]{.8\linewidth}
+        \begin{overlayarea}{\textwidth}{0.28\textheight}
+          \begin{itemize}
+          \item<2-> Pour chaque $e_0 \in E$
+            \begin{enumerate}
+            \item<3-> Construire $\bs{G(e_0)}$ en supprimant $e_0$
+            \item<4-> Résoudre le SSBP sur $\bs{G(e_0)}$\\
+            (algorithme dans le cas linéaire)
+            \end{enumerate}
+          \end{itemize}
+        \end{overlayarea}
+      \end{minipage}
+    \end{minipage}
     \begin{minipage}[c]{\linewidth}
       \begin{minipage}[c]{.2\linewidth}
-        \only<5>{\includegraphics[width=\textwidth]{CapaciteInfinie_GrapheG.jpg}}
-        \only<6>{\includegraphics[width=\textwidth]{CapaciteInfinie_w.jpg}}
-        \only<7>{\includegraphics[width=\textwidth]{CapaciteInfinie_w_1.jpg}}
-        \only<8>{\includegraphics[width=\textwidth]{CapaciteInfinie_w_2.jpg}}
-        \only<9>{\includegraphics[width=\textwidth]{CapaciteInfinie_w_3.jpg}}
-        \only<10>{\includegraphics[width=\textwidth]{CapaciteInfinie_w_4.jpg}}
-        \only<11>{\includegraphics[width=\textwidth]{CapaciteInfinie_w_5.jpg}}
-        \only<12>{\includegraphics[width=\textwidth]{CapaciteInfinie_w_6.jpg}}
-        \only<13->{\includegraphics[width=\textwidth]{CapaciteInfinie_w_7.jpg}}
-      \end{minipage}\hfill
+        \begin{overlayarea}{\textwidth}{\textheight}
+          \only<5>{\includegraphics[width=\textwidth]{CapaciteInfinie/GrapheG.jpg}}
+          \only<6>{\includegraphics[width=\textwidth]{CapaciteInfinie/w.jpg}}
+          \only<7>{\includegraphics[width=\textwidth]{CapaciteInfinie/w_1.jpg}}
+          \only<8>{\includegraphics[width=\textwidth]{CapaciteInfinie/w_2.jpg}}
+          \only<9>{\includegraphics[width=\textwidth]{CapaciteInfinie/w_3.jpg}}
+          \only<10>{\includegraphics[width=\textwidth]{CapaciteInfinie/w_4.jpg}}
+          \only<11>{\includegraphics[width=\textwidth]{CapaciteInfinie/w_5.jpg}}
+          \only<12>{\includegraphics[width=\textwidth]{CapaciteInfinie/w_6.jpg}}
+          \only<13->{\includegraphics[width=\textwidth]{CapaciteInfinie/w_7.jpg}}
+        \end{overlayarea}
+      \end{minipage}
       \begin{minipage}[c]{.8\linewidth}
-        \begin{itemize}
-        \item<6-> Pour chaque $w \in V$, pour chaque $w' \in ]w,o]_+$
-          \begin{enumerate}
-          \item<7-> aller jusqu'à $w'$ dans le sens $(-)$
-          \item<8-> aller jusqu'à $w$ dans le sens $(+)$ en ramassant tous les vélos
-          \item<9-> Construire le graphe linéaire $\bs{G(w,w',+)}$
-          \item<10-> Résoudre le SSBP sur $\bs{G(w,w',+)}$\\
-          (algorithme dans le cas linéaire)
-          \item<12-> aller jusqu'à $w$ dans le sens $(+)$ en équilibrant toutes les stations
-          \item<13-> revenir en $p$ dans le sens $(-)$
-          \end{enumerate}
-        \item<14-> Faire de même en allant d'abord sur $w$ dans le sens $(+)$
-        \end{itemize}
+        \begin{overlayarea}{\textwidth}{\textheight}
+          \begin{itemize}
+          \item<6-> Pour chaque $w \in V$, pour chaque $w' \in ]w,o]_+$
+            \begin{enumerate}
+            \item<7-> aller jusqu'à $w'$ dans le sens $(-)$
+            \item<8-> aller jusqu'à $w$ dans le sens $(+)$ en ramassant tous les vélos
+            \item<9-> Construire le graphe linéaire $\bs{G(w,w',+)}$
+            \item<10-> Résoudre le SSBP sur $\bs{G(w,w',+)}$\\
+            (algorithme dans le cas linéaire)
+            \item<12-> aller jusqu'à $w$ dans le sens $(+)$ en équilibrant toutes les stations
+            \item<13-> revenir en $p$ dans le sens $(-)$
+            \end{enumerate}
+          \item<14-> Faire de même en allant d'abord sur $w$ dans le sens $(+)$
+          \end{itemize}
+        \end{overlayarea}
       \end{minipage}
     \end{minipage}
   \end{center}
@@ -113,6 +121,7 @@
         \item<3-> $\mbox{Coût}(S) < 2\sum_{e \in E}c_e$
         \item<4-> Par l'absurde, on ne peut passer deux fois par chaque arête.
       \end{itemize}
+      \vskip-1\baselineskip
     \end{proof}
   }
   \end{overlayarea}
@@ -152,7 +161,15 @@
         \begin{minipage}[c]{.4\linewidth}
         \begin{center}
           Solution initiale $S$\\
-          \includegraphics[width=\textwidth]{GrapheCirculaire_PreuveZeInf3.jpg}
+          \begin{overlayarea}{\textwidth}{\textheight}
+            \only<4-5>{\includegraphics[width=\textwidth]{CapaciteInfinie/PreuveZeInf3.jpg}}
+            \only<6>{\includegraphics[width=\textwidth]{CapaciteInfinie/PreuveZeInf3_Zone1.jpg}}
+            \only<7>{\includegraphics[width=\textwidth]{CapaciteInfinie/PreuveZeInf3_Zone1cor.jpg}}
+            \only<8>{\includegraphics[width=\textwidth]{CapaciteInfinie/PreuveZeInf3_Zone2.jpg}}
+            \only<9>{\includegraphics[width=\textwidth]{CapaciteInfinie/PreuveZeInf3_Zone2cor.jpg}}
+            \only<10>{\includegraphics[width=\textwidth]{CapaciteInfinie/PreuveZeInf3_Zone3.jpg}}
+            \only<11->{\includegraphics[width=\textwidth]{CapaciteInfinie/PreuveZeInf3_Zone3cor.jpg}}
+          \end{overlayarea}
         \end{center}
         \end{minipage} \hfill
       }
@@ -161,7 +178,9 @@
         \begin{minipage}[c]{.4\linewidth}
         \begin{center}
           Nouvelle solution $S'$\\
-          \includegraphics[width=\textwidth]{GrapheCirculaire_PreuveZeInf3_simple.jpg}
+          \begin{overlayarea}{\textwidth}{\textheight}
+            \includegraphics[width=\textwidth]{CapaciteInfinie/PreuveZeInf3_simple.jpg}
+          \end{overlayarea}
         \end{center}
         \end{minipage} \hfill
       }

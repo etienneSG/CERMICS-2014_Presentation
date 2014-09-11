@@ -15,6 +15,9 @@
   \end{frame} 
 }
 
+% transparence du texte masqué plutôt que disparition
+%\setbeamercovered{transparent}
+
 %Pour souligner sur plusieurs lignes
 \usepackage{ulem}
 \normalem
@@ -37,6 +40,7 @@
 \theoremstyle{definition} % (corps en texte normal)
 \newtheorem{conj}{Conjecture}
 \newtheorem*{rmq}{Remarque}
+\renewcommand{\qedsymbol}{} %Pas de symbole en fin de démonstration
 
 \graphicspath{{images/}}
 
@@ -59,9 +63,9 @@
 
 \include{Sections/Presentation_modele}
 
-\include{Sections/Graphe_triangulaire}
-
 \include{Sections/Graphe_Capacite_infinie}
+
+\include{Sections/Graphe_Capacite_unitaire}
 
 
 \end{document}
