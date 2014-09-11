@@ -16,6 +16,7 @@
       \textbf{Hypothèses (H) :}
       \begin{itemize}
       \item Capacité de transport $C=1$
+      \item $p=q$
       \item deux formes de stations possibles :
         \begin{itemize}
         \item station \plus de la forme $(1,0)$
@@ -52,19 +53,19 @@
 
 \begin{proof}
   \begin{itemize}
-  \item<1-> il existe $e_0 \in E$ tel que le camion ne passe pas par $e_0$
-  \item<2-> le camion passe par tous les sommets et\\
+  \item<2-> il existe $e_0 \in E$ tel que le camion ne passe pas par $e_0$
+  \item<3-> le camion passe par tous les sommets et\\
     il existe $e_0 \in E$ tel que le camion passe exactement une fois par $e_0$
     \begin{itemize}
-    \item<3-> Construire le graphe biparti complet (\plus et \moins)
-    \item<4-> Recherche de cycle hamiltonien optimal $\Rightarrow$ indépendant origine
-    \item<5-> On résout à partir de la station atteinte après le passage sur $e_0$\\
+    \item<4-> Construire le graphe biparti complet (\plus et \moins)
+    \item<5-> Recherche de cycle hamiltonien optimal $\Rightarrow$ indépendant origine
+    \item<6-> On résout à partir de la station atteinte après le passage sur $e_0$\\
     (algorithme dans le cas linéaire)
     \end{itemize}
   \end{itemize}
   \vskip-1\baselineskip
 \end{proof}
-\onslide<5->
+\onslide<6->
 {
   \begin{center}
     \includegraphics[width=0.35\textheight]{CapaciteUnitaire/PreuveAlgo1.jpg}
@@ -83,7 +84,7 @@
 \onslide<1->
 {
   \begin{prop}
-  Sous les hypothèses (H), si  $\Upsilon_G$ < $2\sum_{e \in E}c_e$, alors il existe un algorithme polynomial donnant le trajet optimal du camion.
+  Sous les hypothèses (H), si  $\Upsilon_G < 2\sum_{e \in E}c_e$, alors il existe un algorithme polynomial donnant le trajet optimal du camion.
   \end{prop}
 }
 \onslide<2->
@@ -94,6 +95,14 @@
   alors $\Upsilon_G~\ge~2\sum_{e \in E}c_e$
     \vskip-0.8\baselineskip
   \end{proof}
+}
+\onslide<3->
+{
+  \begin{rmq}
+  $\Upsilon_G < 2\sum_{e \in E}c_e$ est une condition très forte.
+  
+  Pire cas : $\Upsilon_G \sim n^2\sum_{e \in E}c_e$
+  \end{rmq}
 }
 
 \end{frame}
